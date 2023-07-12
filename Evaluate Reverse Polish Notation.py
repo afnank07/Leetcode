@@ -1,3 +1,6 @@
+# Runtime 79ms Beats 88%
+# Memory 16.7mb Beats 58%
+
 def evalRPN(tokens: list[str]) -> int:
     stack = []
     for t in tokens:
@@ -15,31 +18,34 @@ def evalRPN(tokens: list[str]) -> int:
 tokens = ["10","6","9","3","+","-11","*","/","*","17","+","5","+"]
 print(evalRPN(tokens))
 
+# ********************************************************************* #
+# Runtime 78ms Beats 90.48%
+# Memory 16.7mb Beats 90%
 
-# def evalRPN(tokens: list[str]) -> int:
-#     stack = []
-#     for i in tokens:
-#         if i == '+':
-#             a = stack.pop()
-#             b = stack.pop()
-#             num = b + a
-#             stack.append(num)
-#         elif i == '-':
-#             a = stack.pop()
-#             b = stack.pop()
-#             num = b - a
-#             stack.append(num)
-#         elif i == '/':
-#             a = stack.pop()
-#             b = stack.pop()
-#             num = int(b / a)
-#             stack.append(num)
-#         elif i == '*':
-#             a = stack.pop()
-#             b = stack.pop()
-#             num = b * a
-#             stack.append(num)
-#         else:
-#             stack.append(eval(i))
+def evalRPN(tokens: list[str]) -> int:
+    stack=[]
+    arth = ['+', '-', '*', '/']
+    for n in tokens:
+        if n in arth:
+            b = stack.pop()
+            a = stack.pop()
+            if n == '+':
+                c = int(a) + int(b)
+            elif n == '-':
+                c = int(a) - int(b)
+            elif n == '*':
+                c = int(a) * int(b)
+            elif n == '/':
+                c = int(a) / int(b)
+            stack.append(c)
+        else:
+            stack.append(eval(n))
+
+    return stack[-1]
+
+tokens = ["4","13","5","/","+"]
+print(evalRPN(tokens))
+
+
         
 #     return stack[-1]
