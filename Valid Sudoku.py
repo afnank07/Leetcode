@@ -28,9 +28,9 @@ def isValidSudoku(board):
             cols[c].append(board[r][c])
             square[(r//3,c//3)].append(board[r][c])
 
-            print("rows: ", r)
-            print("cols: ", c)
-            print("square: ", r//3, c//3)
+        print("rows: ", rows)
+        print("cols: ", cols)
+        print("square: ", square, '\n')
     
     return True
 
