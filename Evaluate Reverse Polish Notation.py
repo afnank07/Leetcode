@@ -18,11 +18,12 @@ def evalRPN(tokens: list[str]) -> int:
 tokens = ["10","6","9","3","+","-11","*","/","*","17","+","5","+"]
 print(evalRPN(tokens))
 
-# ********************************************************************* #
+# ------------------- SECOND APPROACH ----------------- #
+
 # Runtime 78ms Beats 90.48%
 # Memory 16.7mb Beats 90%
 
-def evalRPN(tokens: list[str]) -> int:
+def evalRPN_2(tokens: list[str]) -> int:
     stack=[]
     arth = ['+', '-', '*', '/']
     for n in tokens:
@@ -44,7 +45,7 @@ def evalRPN(tokens: list[str]) -> int:
     return stack[-1]
 
 tokens = ["4","13","5","/","+"]
-print(evalRPN(tokens))
+print(evalRPN_2(tokens))
 
 
         
