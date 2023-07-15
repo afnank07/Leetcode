@@ -16,6 +16,8 @@ def dailyTemperatures(temperatures: list[int]) -> list[int]:
 temperatures = [73,74,75,71,69,72,76,73]
 print(dailyTemperatures(temperatures))
 
+# ------------------- OTHER APPROACHES ----------------- #
+
 # Solution Using stack
 # Time complexity O(n): cause we are looping through every ele just once 
 # Memory O(n)
