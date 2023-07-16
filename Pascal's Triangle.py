@@ -2,6 +2,9 @@
 # Memory O(n2)
 # Runtime: Beats 81.71% | Memory: Beats 78.52%
 
+# NOTE: You can get the each element by it's row and column using nCr formula
+# Link: https://takeuforward.org/data-structure/program-to-generate-pascals-triangle/
+
 def generate(numRows: int) -> list[list[int]]:
     ans = [[1]]
 
