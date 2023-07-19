@@ -1,3 +1,7 @@
+# Time complexity O(n): 2 seperate for loops
+# Memory O(1): Inplace
+# Runtime: Beats 41.72% | Memory: Beats 96.46%
+
 """
 This problem has a algorithm. 
 
