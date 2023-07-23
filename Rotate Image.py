@@ -1,3 +1,6 @@
+# Time complexity O(n2)
+# Space complexity: O(1)
+# Runtime: Beats 54.18% | Memory: Beats 87.76%
 
 """
 Intuition: Figuring out that, there is a transpose of matrix required and then reversing each row 
@@ -12,8 +15,7 @@ def rotate(matrix: list[list[int]]) -> None:
     # Reverse every row
     for i in range(len(matrix)):
         matrix[i] = matrix[i][::-1]
-        # print(i)
-
+        
     return matrix
 
 matrix = [[1,2,3],[4,5,6],[7,8,9]]
