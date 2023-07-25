@@ -1,6 +1,6 @@
 # Time complexity: O(nlogn) + O(n): cause we are using sort and a loop
 # Space complexity: O(1): inplace
-# Runtime: Beats 56.89% | Memory: Beats 81.85%
+# Runtime: Beats 61.41% | Memory: Beats 94.34%
 
 def merge(intervals: list[list[int]]) -> list[list[int]]: 
     if len(intervals) == 1:
